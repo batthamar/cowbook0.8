@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cowbook</title>
+</head>
+<body>
+    <%- include("CBheader.ejs") %>
+    <br>
+    <br>
+    <br>
+    <br>
+  <form action="/submitupdate" method="POST">
+    <label><b>serial no :<%=id%></b></label>
+    <input type="hidden" id="serial_no" name="serial_no" value="<%= id %>">
+    <label for="DOB"><b>Enter date of birth :</b></label>
+    <input type="date" id="DOB" name="DOB" required value="<%= dob %>">
+    <label for="no_of_lactation"><b>No of Lactation :</b></label>
+    <input type="number" id="no_of_lactation" name="no_of_lactation" value="<%= lactations %>" step="1" min="0" max="30" required >
+    <label for="inseminated"><b>Is the cow inseminated </b></label><br><br>
+    <div class="row">
+    <button type="button"id="yes"class="buttonsmall">yes</button>
+    <button type="button"id="no"class="buttonsmall">no</button>
+    </div>
+    <input type="hidden" id="inseminated" name="inseminated" value="<%= inseminated %>">
+           <br>
+           <br>
+    <div id="showDOI"style="display:none;">
+    <label for="DOB"><b>Enter date of insemination :</b></label>
+    <input type="date" id="DOI" name="DOI" required value="<%=doi%>">
+    </div>
+    <input type="submit" class="button" value="Submitupdate">
+  </form>
+    </div>
+    <script src="../javascript.code/CBaddcow.js" charset="utf-8"></script>
+ 
+    
+</body>
+</html>

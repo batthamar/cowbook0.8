@@ -1,0 +1,19 @@
+{
+  "name": "javascript.code",
+  "version": "1.0.0",
+  "description": "imports",
+  "main": "CBaddcow.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "5.2.1",
+    "ejs":"5.0.2",
+    "axios":"^1.4.0",
+    "pg": "^8.11.3"
+  }
+}
+

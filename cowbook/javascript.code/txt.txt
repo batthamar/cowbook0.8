@@ -1,0 +1,26 @@
+import express from "express";
+import ejs from "ejs";
+import bodyparser from "body-parser";
+import {fileURLToPath} from "url"
+import {dirname} from "path"
+
+const port =3000;
+const app =express();
+const __dirname=dirname(fileURLToPath(import.meta.url));
+
+app.use(bodyparser.urlencoded({extended:true}));
+app.get("/",(req,res)=>{
+    res.sendFile(__dirname+"/cowbook/html.code/CBaddcow.html");
+
+});
+app.post("/submit",(req,res)=>{
+    const data={
+         DOB:req.body["DOB"],
+         serial_no:req.body["serial_no"],
+         no_of_calf:req.body["no_of_calf"],
+        };
+    
+       res.render(__dirname+"/views/CBsubmit.ejs",{data});});
+app.listen(port,()=>{
+    console.log("working");
+});

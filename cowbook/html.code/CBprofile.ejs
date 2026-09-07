@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Profile</title>
+    <link rel="stylesheet" href="../css.code/CBprofile.css">
+</head>
+<body>
+    <%- include("CBheader.ejs") %>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="../photo/myphotocb.jpg" alt="Profile Photo" class="profile-photo">
+            <div class="profile-info">
+                <h1><%= name %></h1>
+                
+            </div>
+        </div>
+        
+        <div class="profile-details">
+            <div class="detail">
+                <strong>Number of Animals:</strong>
+                <%= no_of_animals%>
+            </div>
+            <div class="detail">
+                <strong>Experience:</strong>
+                <p>--</p>
+            </div>
+            <div class="detail">
+                <strong>Farm Location:</strong>
+                <p>kailey kalan, Gurdaspur, Punjab</p>
+                <a href="https://www.google.com/maps/place/31%C2%B055'34.7%22N+75%C2%B015'37.2%22E/@31.9263097,75.2582566,704m/data=!3m2!1e3!4b1!4m13!1m8!3m7!1s0x391bebe6c83c758b:0x83b670523d5f517b!2sKailey+Kalan,+Punjab+143519!3b1!8m2!3d31.9215748!4d75.2566564!16s%2Fg%2F12lkwg80r!3m3!8m2!3d31.926306!4d75.260335?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D">
+                    <img src="../photo/Screenshot 2024-09-04 115358.png" alt="Google Map" class="map-image">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

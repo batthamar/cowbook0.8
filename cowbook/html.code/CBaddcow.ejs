@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cowbook</title>
+    <link rel="stylesheet" href="../css.code/CBaddcow.css">
+    <style>
+        .text-align
+        {
+        text-align:none;
+        }
+    </style>
+
+</head>
+
+<body>
+<%- include("CBheader.ejs") %>
+
+    
+    <div class="container" style="margin-top: 100px; padding-right:60px ;">
+
+        <h2>Farm Animal Profile</h2>
+  <form action="/submit" method="POST">
+    <label for="serial_no"><b>Enter serial no :</b></label>
+    <input type="text" id="serial_no" name="serial_no" placeholder="eg:- 25" required>
+    <label for="DOB"><b>Enter date of birth :</b></label>
+    <input type="date" id="DOB" name="DOB" required>
+    <label for="no_of_lactation"><b>No of Lactation :</b></label>
+    <input type="number" id="no_of_lactation" name="no_of_lactation" placeholder="eg:- 2,3" step="1" min="0" max="30" required >
+    <label for="inseminated"><b>Is the cow inseminated </b></label><br><br>
+    <div class="row">
+    <button type="button"id="yes"class="buttonsmall">yes</button>
+    <button type="button"id="no"class="buttonsmall">no</button>
+    </div>
+    <input type="hidden" id="inseminated" name="inseminated">
+           <br>
+           <br>
+    <div id="showDOI"style="display:none;">
+    <label for="DOB"><b>Enter date of insemination :</b></label>
+    <input type="date" id="DOI" name="DOI" required>
+    </div>
+    <input type="submit" class="button" value="Submit">
+  </form>
+    </div>
+    <script src="../javascript.code/CBaddcow.js" charset="utf-8"></script>
+ 
+</body>
+</html>

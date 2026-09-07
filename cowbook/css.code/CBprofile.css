@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 100px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+   
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 5px solid #000;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.profile-info h2 {
+    margin: 5px 0 0;
+    font-size: 24px;
+    color: #555;
+}
+
+.profile-details .detail {
+    margin-bottom: 20px;
+}
+
+.profile-details .detail strong {
+    font-size: 18px;
+    color: #333;
+}
+
+.profile-details .detail p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.map-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.map-image:hover {
+    transform: scale(1.05);
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixes header to the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Keeps header above other content */
+    margin-bottom: 50px;
+}
+
+
+.buttonsarrangement {
+    display: flex;
+    gap: 15px;
+}
+
+
+
+
+
+.Profile {
+    display: flex;
+    align-items: center;
+   
+    margin-right: 28px
+    
+}
+
+.Profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.buttons a{
+    
+    border: solid black 3px ;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+.homebutton{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+   
+   
+}
+.buttons a:hover {
+    background-color: lightgray;
+}

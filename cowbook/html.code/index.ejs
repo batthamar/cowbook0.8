@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cowbook</title>
+    <link rel="stylesheet" href="../css.code/index.css">
+</head>
+<body>
+    <%- include("CBheader.ejs") %>
+
+    <div class="main-content">
+        
+        <span style="font-size: 75px;">Cowbook</span>
+        <br>
+        <br>
+        <div class="Profile"> 
+        <form action="/search" method="POST">
+        <label for="search">Enter cow tag number</label>
+        <input  type="text" id="serial_no" name="serial_no" placeholder="Search cow" required>
+        <input type="submit" value="Submit">
+        </form>
+        <br><br>    
+        </div>
+        
+        <div><a href="/addcow"><button >add cow</button></a> <a href="/allcows"><button >show all cows</button></a></div>
+<%if (locals.error){%>
+    <script> alert("<%= error %>");</script>
+<%}%>
+</body>
+</html>

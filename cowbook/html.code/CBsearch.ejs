@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cowbook</title>
+    <link rel="stylesheet" href="../css.code/CBresultpage.css">
+</head>
+<body>
+   <%- include("CBheader.ejs") %>
+    <div class="profile-container">
+        <h2>Farm Animal Profile</h2>
+        <div class="info">
+            <div><span>Serial No:</span> <%= serial_no %></div>
+            <div><span>DOB:</span><%= DOB %></div>
+            <div><span>Lactation:</span><%= no_of_lactation%></div>
+            <div><span>Inseminated:</span><%= inseminated%></div>
+            <%if(doi){%>
+            <div><span>Data of insemination:</span><%= doi%><br>
+            <%=days%>&nbsp;<span>days</span> <%=month%>&nbsp;<span>month</span></div>
+            <%}%>
+            <form action="/update" method="post">
+                <input type="hidden" name="id" value="<%=serial_no%>">
+                <input type="hidden" name="dob" value="<%= DOB %>">
+                <input type="hidden" name="lactations" value="<%= no_of_lactation %>">
+                <input type="hidden" name="insemination" value="<%= inseminated %>">
+                <input type="hidden" name="doi" value="<%= doi %>">
+                <button type="submit">update</button>
+            </form>
+            </div>
+        </div>
+    <script>
+    const inseminated = "<%= inseminated %>";
+    </script>
+    <script src ="../javascript.code/CBsearch.js" charset="utf-8"></script>
+</body>
+</html>
